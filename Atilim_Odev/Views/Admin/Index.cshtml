@@ -1,0 +1,74 @@
+﻿@model IEnumerable<Atilim_Odev.Models.Siniflar.Kimlik>
+
+    
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TC_No)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Soyad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DogumYeri)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DogumTarihi)
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr class="align-middle">
+                <td>
+                    @Html.DisplayFor(modelItem => item.TC_No)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Soyad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DogumYeri)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DogumTarihi)
+                </td>
+                <td class="text-end">
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-outline-primary btn-sm"><i class="fa-regular fa-pen-to-square"></i>   Düzenle</a>
+                    <a asp-action="Iletisim" asp-route-id="@item.Id" class="btn btn-outline-secondary btn-sm"><i class="fa-solid fa-phone"></i>   Iletisim </a>
+                    <a asp-action="MufredatAta" asp-route-id="@item.Id" class="btn btn-outline-warning btn-sm"><i class="fa-solid fa-box-archive"></i> Mufredat Ata </a>
+                    <a asp-action="DersGoruntule" asp-route-id="@item.Id" class="btn btn-outline-info btn-sm"><i class="fa-solid fa-book"></i> Derslerini Gör</a>
+                    <a asp-action="OgrenciSil" asp-route-id="@item.Id" class="btn btn-outline-danger btn-sm"><i class="fa-solid fa-trash"></i>   Sil</a>
+
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div class="text-center">
+
+<a asp-controller="Admin" asp-action="YeniOgrenci" class="btn btn-outline-success"> <i class="fa-solid fa-user-plus"></i>  Ogrenci Ekle</a>
+
+@*mufredat ekle *@
+<a asp-controller="Admin" asp-action="Mufredat" class="btn btn-outline-success"><i class="fa-solid fa-book-open"></i>  Mufredat Sayfası</a>
+
+@*ders ekle *@
+<a asp-controller="Admin" asp-action="Ders" class="btn btn-outline-success"><i class="fa-solid fa-chair"></i> Ders Sayfası</a>
+
+
+@*Kullanıcı Sayfası *@
+<a asp-controller="Admin" asp-action="Kullanici" class="btn btn-outline-success"><i class="fa-solid fa-user"></i> Kullanici Görüntüle</a>
+
+
+
+</div>

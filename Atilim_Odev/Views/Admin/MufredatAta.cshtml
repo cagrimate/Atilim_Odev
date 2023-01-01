@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Atilim_Odev.Models.Siniflar.Mufredat>
+
+
+   
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MufredatAdi)
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr class="align-middle">
+                <td>
+                    @Html.DisplayFor(modelItem => item.MufredatAdi)
+                </td>
+               
+                <td class="text-end">
+                    <a asp-action="MufredatOnay" asp-route-id="@item.Id" asp-route-ogrenciId="@ViewBag.OgrenciId" class="btn btn-primary btn-sm">ATA</a>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

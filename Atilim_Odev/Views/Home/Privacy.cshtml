@@ -1,0 +1,12 @@
+﻿@using Atilim_Odev.Models.Siniflar
+@model List<Ogrenci>
+
+
+<div class="container">
+    <div>
+        @foreach (var item in Model)
+        {
+            <h3> @item.Ogr_No</h3>
+        }
+    </div>
+</div>

@@ -1,0 +1,18 @@
+﻿@model Atilim_Odev.Models.Siniflar.Ders_Kayit
+
+@{
+    ViewData["Title"] = "Kayıt";
+}
+
+<h1>Delete</h1>
+
+<h3>Kayit Olmak İstiyor Musunuz ? </h3>
+<div>
+   
+
+    <form asp-action="DersKayit">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Ders Kayit" class="btn btn-primary" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

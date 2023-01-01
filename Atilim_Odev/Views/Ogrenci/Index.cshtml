@@ -1,0 +1,54 @@
+﻿@model Atilim_Odev.Models.Siniflar.Kimlik
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TC_No)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Soyad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DogumYeri)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DogumTarihi)
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+       
+            <tr class="align-middle">
+                <td>
+                    @Html.DisplayFor(modelItem => Model.TC_No)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => Model.Ad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => Model.Soyad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => Model.DogumYeri)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => Model.DogumTarihi)
+                </td>
+                <td class="text-end">
+                    <a asp-action="Iletisim" asp-route-id="@Model.Id" class="btn btn-secondary"> Iletisim </a>
+                </td>
+            </tr>
+       
+    </tbody>
+</table>
+
+       @*mufredat goruntule              *@
+<a asp-controller="Ogrenci" asp-action="Mufredat" class="btn btn-primary"> Ders Goruntule</a>
+

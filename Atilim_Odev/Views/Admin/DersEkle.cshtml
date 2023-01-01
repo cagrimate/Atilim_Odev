@@ -1,0 +1,39 @@
+﻿@model Atilim_Odev.Models.Siniflar.Dersler
+
+<div class="container">
+    <form asp-action="DersDuzenle">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <input type="hidden" asp-for="@Model.Id" />
+
+
+        @*kimlik*@
+        <div class="form-group">
+            <label asp-for="DersKodu" class="control-label">Ders Kodu</label>
+            <input asp-for="DersKodu" class="form-control" type="text" />
+            <span asp-validation-for="DersKodu" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="DersAdi" class="control-label">Ders Adı</label>
+            <input asp-for="DersAdi" class="form-control" />
+            <span asp-validation-for="DersAdi" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Durum" class="control-label">Durum</label>
+            <input asp-for="Durum" class="form-control" type="checkbox" />
+            <span asp-validation-for="Durum" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Kredi" class="control-label">Kredi</label>
+            <input asp-for="Kredi" class="form-control" type="number" />
+            <span asp-validation-for="Kredi" class="text-danger"></span>
+        </div>
+
+        <button class="btn btn-success" type="submit"> KAYDET </button>
+
+    </form>
+
+
+</div>

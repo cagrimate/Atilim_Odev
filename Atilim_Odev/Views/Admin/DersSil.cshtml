@@ -1,0 +1,18 @@
+﻿@model Atilim_Odev.Models.Siniflar.Dersler
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Ders Sil</h1>
+
+<h3>Silme İşlemini Onaylıyor musunuz ?</h3>
+<div>
+   
+
+    <form asp-action="DersSil">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Ders Sil" class="btn btn-danger" /> |
+        <a asp-action="Ders">Back to List</a>
+    </form>
+</div>

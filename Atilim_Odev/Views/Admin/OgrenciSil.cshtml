@@ -1,0 +1,18 @@
+﻿@model Atilim_Odev.Models.Siniflar.Kimlik
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Öğrenci Sil</h1>
+
+<h3>Silme işlemini onaylıyor musunuz?</h3>
+<div>
+   
+
+    <form asp-action="OgrenciSil">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Ogrenci Sil" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

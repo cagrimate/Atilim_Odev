@@ -1,0 +1,36 @@
+﻿@using Atilim_Odev.Models.Siniflar
+@model List<Ders_Kayit>
+
+
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                Ders Adi
+            </th>
+            <th>
+                Ders Kodu
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr class="align-middle">
+                <td>
+                    @Html.DisplayFor(modelItem => @item.Ders.DersAdi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => @item.Ders.DersKodu)
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Index">Anasayfa</a>
+

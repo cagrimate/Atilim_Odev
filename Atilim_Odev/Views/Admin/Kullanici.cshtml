@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Atilim_Odev.Models.Siniflar.Kullanicilar>
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Kullanici_Adi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sifre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tur)
+            </th>
+           
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr class="align-middle">
+                <td>
+                    @Html.DisplayFor(modelItem => item.Kullanici_Adi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sifre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tur)
+                </td>
+          
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+<a asp-action="Index" class="btn btn-outline-success btn-sm">Anasayfa</a>

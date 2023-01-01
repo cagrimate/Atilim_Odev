@@ -1,0 +1,18 @@
+﻿@model Atilim_Odev.Models.Siniflar.Mufredat
+
+@{
+    ViewData["Title"] = "Onay";
+}
+
+<h1>Onay</h1>
+
+<h3>Atama İşlemini Onaylıyor Musunuz ?</h3>
+<div>
+   
+
+    <form asp-action="MufredatOnay">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Mufredat Atamasını Onayla" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

@@ -1,0 +1,27 @@
+﻿
+
+@model Atilim_Odev.Models.Siniflar.Mufredat
+
+
+
+
+<div class="container">
+    <form asp-action="MufredatEkle">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+       <div class="form-group">
+                <label asp-for="MufredatAdi" class="control-label">Mufredat İsmi</label>
+                <input asp-for="MufredatAdi" class="form-control" type="text" />
+                <span asp-validation-for="MufredatAdi" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group">
+                <input type="submit" value="Mufredat Ekle" class="btn btn-primary" />
+            </div>
+
+
+    </form>
+
+
+</div>

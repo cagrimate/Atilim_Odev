@@ -1,0 +1,52 @@
+﻿@using Atilim_Odev.Models.Siniflar
+@model List<Dersler>
+
+
+
+
+@*<p>@item.DersAdi</p>*@
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Ders Adi
+            </th>
+            <th>
+                Ders Kodu
+            </th>
+            <th>
+                Durum
+            </th>
+            <th>
+                Kredi
+            </th>
+            
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr class="align-middle">
+                <td>
+                    @Html.DisplayFor(modelItem => @item.DersAdi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => @item.DersKodu)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => @item.Durum)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => @item.Kredi)
+                </td>
+                <td class="text-end">
+                    <a asp-action="DersKayit" asp-route-id="@item.Id" class="btn btn-secondary"> Kayıt Yap </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,55 @@
+﻿@model IEnumerable<Atilim_Odev.Models.Siniflar.Dersler>
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DersKodu)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DersAdi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Durum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Kredi)
+            </th>
+           
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr class="align-middle">
+                <td>
+                    @Html.DisplayFor(modelItem => item.DersKodu)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DersAdi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Durum)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Kredi)
+                </td>
+                
+                <td class="text-end">
+                    <a asp-action="DersDuzenle" asp-route-id="@item.Id" class="btn btn-outline-primary btn-sm"><i class="fa-regular fa-pen-to-square"></i> Düzenle</a>
+                    <a asp-action="DersSil" asp-route-id="@item.Id" class="btn btn-outline-danger btn-sm"><i class="fa-solid fa-trash"></i> Sil</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+<a asp-controller="Admin" asp-action="DersEkle" class="btn btn-primary"> Ders Ekle</a>
+
+<a asp-action="Index" class="btn btn-outline-success btn-sm">Anasayfa</a>
+
+
